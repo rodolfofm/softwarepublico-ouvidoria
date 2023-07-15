@@ -28,7 +28,7 @@
 -->
 
 <!--CONTEXTO PARA EXECUCAO LOCAL sem JNDI -->
-<!-- 
+
 <Context path="/ouvidoria" reloadable="true" swallowOutput="true">
 	<Logger className="org.apache.catalina.logger.FileLogger" prefix="ouvidoria." suffix=".log" timestamp="true" />
 	<Resource name="jdbc/ouvidoria" type="javax.sql.DataSource" />
@@ -55,7 +55,7 @@
 		</parameter>
 	</ResourceParameters>
 </Context>
- -->
+
 
 <!-- CONTEXTO PARA EXECUCAO LOCAL com JNDI -->
 <!-- 
@@ -117,60 +117,60 @@
  -->
 
 <!-- CONTEXTO PARA EXECUCAO NA HOMOLOGACAO DO SERPRO -->
- 
-<Context path="/ouvidoria" docBase="ouvidoria" debug="0" privileged="false">
+<!-- -->
+<!--<Context path="/ouvidoria" docBase="ouvidoria" debug="0" privileged="false">-->
 
-	<Valve className="org.apache.catalina.valves.AccessLogValve" prefix="sistemaouvidoria_acess_log." suffix=".txt"
-		pattern="common" />
-	<Logger className="org.apache.catalina.logger.FileLogger" prefix="sistemaouvidoria_log." suffix=".txt"
-		timestamp="true" />
+<!--	<Valve className="org.apache.catalina.valves.AccessLogValve" prefix="sistemaouvidoria_acess_log." suffix=".txt"-->
+<!--		pattern="common" />-->
+<!--	<Logger className="org.apache.catalina.logger.FileLogger" prefix="sistemaouvidoria_log." suffix=".txt"-->
+<!--		timestamp="true" />-->
 
-	<Resource name="jdbc/ouvidoria" type="javax.sql.DataSource" />
-	<ResourceParams name="jdbc/ouvidoria">
-		<parameter>
-			<name>factory</name>
-			<value>org.apache.commons.dbcp.BasicDataSourceFactory</value>
-		</parameter>
-		<parameter>
-			<name>url</name>
-			<value>jdbc:mysql://161.148.173.170/Dbh_99015_Ouvidoria</value>
-		</parameter>
-		<parameter>
-			<name>driverClassName</name>
-			<value>com.mysql.jdbc.Driver</value>
-		</parameter>
-		<parameter>
-			<name>username</name>
-			<value>usrh_ouvidor</value>
-		</parameter>
-		<parameter>
-			<name>password</name>
-			<value>9745ouvidoriapp</value>
-		</parameter>
-		<parameter>
-			<name>poolPreparedStatements</name>
-			<value>true</value>
-		</parameter>
-		<parameter>
-			<name>initialSize</name>
-			<value>5</value>
-		</parameter>
-		<parameter>
-			<name>maxWait</name>
-			<value>1000</value>
-		</parameter>
-		<parameter>
-			<name>maxIdle</name>
-			<value>150</value>
-		</parameter>
-		<parameter>
-			<name>minIdle</name>
-			<value>5</value>
-		</parameter>
-		<parameter>
-			<name>maxActive</name>
-			<value>100</value>
-		</parameter>
-	</ResourceParams>
-</Context>
- 
+<!--	<Resource name="jdbc/ouvidoria" type="javax.sql.DataSource" />-->
+<!--	<ResourceParams name="jdbc/ouvidoria">-->
+<!--		<parameter>-->
+<!--			<name>factory</name>-->
+<!--			<value>org.apache.commons.dbcp.BasicDataSourceFactory</value>-->
+<!--		</parameter>-->
+<!--		<parameter>-->
+<!--			<name>url</name>-->
+<!--			<value>jdbc:mysql://161.148.173.170/Dbh_99015_Ouvidoria</value>-->
+<!--		</parameter>-->
+<!--		<parameter>-->
+<!--			<name>driverClassName</name>-->
+<!--			<value>com.mysql.jdbc.Driver</value>-->
+<!--		</parameter>-->
+<!--		<parameter>-->
+<!--			<name>username</name>-->
+<!--			<value>usrh_ouvidor</value>-->
+<!--		</parameter>-->
+<!--		<parameter>-->
+<!--			<name>password</name>-->
+<!--			<value>9745ouvidoriapp</value>-->
+<!--		</parameter>-->
+<!--		<parameter>-->
+<!--			<name>poolPreparedStatements</name>-->
+<!--			<value>true</value>-->
+<!--		</parameter>-->
+<!--		<parameter>-->
+<!--			<name>initialSize</name>-->
+<!--			<value>5</value>-->
+<!--		</parameter>-->
+<!--		<parameter>-->
+<!--			<name>maxWait</name>-->
+<!--			<value>1000</value>-->
+<!--		</parameter>-->
+<!--		<parameter>-->
+<!--			<name>maxIdle</name>-->
+<!--			<value>150</value>-->
+<!--		</parameter>-->
+<!--		<parameter>-->
+<!--			<name>minIdle</name>-->
+<!--			<value>5</value>-->
+<!--		</parameter>-->
+<!--		<parameter>-->
+<!--			<name>maxActive</name>-->
+<!--			<value>100</value>-->
+<!--		</parameter>-->
+<!--	</ResourceParams>-->
+<!--</Context>-->
+<!-- -->
