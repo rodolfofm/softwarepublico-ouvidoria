@@ -47,24 +47,28 @@
 	
 	<repositories>
 		<repository>
+			<id>52north</id>
+			<url>https://52north.org/maven/repo/releases</url>
+		</repository>
+		<repository>
 			<id>maven.org</id>
-			<url>http://repo2.maven.org/maven2</url>
+			<url>https://repo1.maven.org/maven2</url>
 		</repository>
 		<repository>
 			<id>demoiselle-release</id>
-			<url>http://demoiselle.sourceforge.net/repository/release</url>
+			<url>https://demoiselle.sourceforge.net/repository/release</url>
 		</repository>
 		<repository>
 			<id>atlassian.com</id>
-			<url>https://maven.atlassian.com/maven1/maven2</url>
+			<url>https://packages.atlassian.com/maven-3rdparty</url>
 		</repository>
 		<repository>
 			<id>wso2.org</id>
-			<url>http://dist.wso2.org/maven2</url>
+			<url>https://dist.wso2.org/maven2</url>
 		</repository>
 		<repository>
 			<id>java.net</id>
-			<url>http://download.java.net/maven/2</url>
+			<url>https://download.java.net/maven/2</url>
 		</repository>
 	</repositories>
 
@@ -133,6 +137,26 @@
 					<appendAssemblyId>true</appendAssemblyId>
 				</configuration>
 			</plugin>
+<!--			<plugin>-->
+<!--				<groupId>org.apache.maven.plugins</groupId>-->
+<!--				<artifactId>maven-dependency-plugin</artifactId>-->
+<!--				<version>3.2.0</version>-->
+<!--				<executions>-->
+<!--					<execution>-->
+<!--						<id>copy-dependencies</id>-->
+<!--						<phase>package</phase>-->
+<!--						<goals>-->
+<!--							<goal>copy-dependencies</goal>-->
+<!--						</goals>-->
+<!--						<configuration>-->
+<!--							<outputDirectory>${project.build.directory}/lib</outputDirectory>-->
+<!--							<includeScope>runtime</includeScope>-->
+<!--							<includeArtifactIds>jfreechart-0.9.21.jar</includeArtifactIds>-->
+<!--						</configuration>-->
+<!--					</execution>-->
+<!--				</executions>-->
+<!--			</plugin>-->
+
 		</plugins>
 	</build>
 
@@ -286,6 +310,8 @@
 		    <groupId>jfree-former</groupId>
 		    <artifactId>jfreechart</artifactId>
 		    <version>0.9.21</version>
+<!--			<scope>system</scope>-->
+<!--			<systemPath>${project.basedir}/src/main/resources/lib/jfreechart-0.9.21.jar</systemPath>-->
 		</dependency>
 		<dependency>
 		    <groupId>jfree</groupId>
@@ -376,7 +402,7 @@
 		    <artifactId>cewolf</artifactId>
 		    <version>1.0</version>
 		</dependency>
-		
+
 		<!-- Display tag library -->
 		<dependency>
 		    <groupId>displaytag</groupId>
